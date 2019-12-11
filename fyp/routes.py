@@ -16,7 +16,7 @@ from flask_login import login_user, current_user, logout_user, login_required
 def admin():
     return render_template('admin.html', title='admin-panel')
 
-@app.route('/')
+
 @app.route('/home')
 def home():
     return render_template('home.html')
@@ -34,7 +34,7 @@ def insert():
         return redirect(url_for('about'))
     return render_template('insert.html', title='Register', form=form)
 
-
+@app.route('/')
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
