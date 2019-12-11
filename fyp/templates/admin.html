@@ -1,0 +1,21 @@
+{% extends 'layout.html' %} {% block content %}
+
+  <div class="row">
+    <div class="col-4">
+      {% include 'includes/_sidebar.html' %}
+    </div>
+    <div class="col-8">
+        <div class="container">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{current_user.username}}</h5>
+                <div class="card-subtitle mb-2 text-muted">{{current_user.email}}</div>
+                <p class="card-text">{{current_user.profession}}</p>
+                <a href="#" class="card-link" data-toggle="modal" data-target="#updateModal">update link</a>
+                
+              </div>
+            </div>
+    </div>
+  </div>
+
+{% endblock content %}
